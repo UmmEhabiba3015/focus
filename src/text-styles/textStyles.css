@@ -1,0 +1,131 @@
+.ts-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 540px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.ts-stage,
+.ts-panel {
+  min-width: 0;
+}
+
+.ts-canvas-wrap {
+  width: 100%;
+}
+
+.ts-canvas-wrap .canvas-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(20, 20, 40, 0.18);
+}
+
+.ts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ts-actions button {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #d4d4dc;
+  background: #fff;
+  color: #1d1d27;
+  cursor: pointer;
+}
+
+.ts-actions button:hover:not(:disabled) {
+  border-color: #7c3aed;
+}
+
+.ts-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ts-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ts-input {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d4d4dc;
+}
+
+.ts-input:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 1px;
+}
+
+.ts-hint {
+  margin: 8px 0 14px;
+  font-size: 13px;
+  color: #6b6b7b;
+}
+
+.ts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.ts-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(20, 20, 40, 0.12);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.ts-card:hover:not(:disabled) {
+  border-color: #c4b5fd;
+}
+
+.ts-card.is-active {
+  border-color: #7c3aed;
+}
+
+.ts-card:disabled {
+  cursor: progress;
+}
+
+/* Fabric writes an inline px size on the canvas; override it so previews scale. */
+.ts-card-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.ts-card-name {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #3a3a48;
+}
+
+@media (max-width: 860px) {
+  .ts-editor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ts-canvas-wrap .canvas-container {
+    margin: 0 auto;
+  }
+}

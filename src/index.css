@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f4f7;
+  color: #1d1d27;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.app h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.app header p {
+  margin: 0 0 20px;
+  color: #6b6b7b;
+  font-size: 14px;
+}
